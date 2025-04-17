@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tampilan Web Sederhana</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #ff8c00;
+            color: white;
+            padding: 10px;
+            display: flex;
+            gap: 20px;
+            justify-content: left;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #e67e00;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .main-content {
+            flex: 3;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .article {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .article:last-child {
+            border-bottom: none;
+        }
+
+        .sidebar {
+            flex: 1;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Judul Utama Halaman</h1>
+    </header>
+
+    <nav>
+        <a href="#artikel1">Artikel 1</a>
+        <a href="#artikel2">Artikel 2</a>
+        <a href="#artikel3">Artikel 3</a>
+        <a href="#artikel4">Artikel 4</a>
+        </nav>
+
+    <div class="container">
+        <main class="main-content">
+            <section class="article" id="artikel1">
+                <h2>Artikel 1</h2>
+                <p>Ini adalah isi dari artikel pertama. Anda bisa menambahkan konten yang lebih panjang dan detail di sini. Misalnya, membahas tips menjaga keamanan akun. Pastikan konten ini relevan dengan topik utama halaman web Anda.</p>
+                <p>Anda juga bisa menambahkan gambar, video, atau elemen interaktif lainnya di dalam artikel ini untuk membuatnya lebih menarik bagi pembaca.</p>
+            </section>
+
+            <section class="article" id="artikel2">
+                <h2>Artikel 2</h2>
+                <p>Ini adalah isi dari artikel kedua. Artikel ini bisa membahas topik yang berbeda atau merupakan kelanjutan dari artikel pertama. Usahakan untuk menjaga gaya penulisan yang konsisten agar pembaca tetap nyaman.</p>
+                <p>Jangan ragu untuk menggunakan heading (h1 sampai h6), paragraf, list (ul atau ol), dan elemen HTML lainnya untuk menyusun konten artikel Anda dengan baik.</p>
+            </section>
+
+            <section class="article" id="artikel3">
+                <h2>Artikel 3</h2>
+                <p>Ini adalah contoh artikel ketiga. Semakin banyak artikel yang Anda sajikan, semakin banyak informasi yang bisa didapatkan oleh pengunjung website Anda.</p>
+                <p>Pastikan setiap artikel memiliki judul yang jelas dan deskriptif agar pembaca tahu apa yang akan mereka baca.</p>
+            </section>
+
+            <section class="article" id="artikel4">
+                <h2>Artikel 4</h2>
+                <p>Ini adalah artikel keempat sebagai contoh tambahan. Anda bebas menambahkan lebih dari dua artikel sesuai dengan kebutuhan konten website Anda.</p>
+                <p>Ingatlah untuk selalu memeriksa tata bahasa dan ejaan agar artikel Anda terlihat profesional.</p>
+            </section>
+            </main>
+
+        <aside class="sidebar">
+            <h3>Sidebar</h3>
+            <ul>
+                <li><a href="#artikel1">Widget 1 (Link ke Artikel 1)</a></li>
+                <li><a href="#artikel2">Widget 2 (Link ke Artikel 2)</a></li>
+                <li><a href="#artikel3">Widget 3 (Link ke Artikel 3)</a></li>
+                <li><a href="#artikel4">Widget 4 (Link ke Artikel 4)</a></li>
+                </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Hak Cipta Kami</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,156 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    max-width: 960px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 25% auto 20%; 
+    grid-template-rows: auto auto auto; 
+    grid-template-areas:
+        "header header header"
+        "sidebar-left main sidebar-right"
+        "footer footer footer";
+}
+
+header {
+    grid-area: header;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #ff8c00;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #cc7000; 
+}
+
+.sidebar-left {
+    grid-area: sidebar-left;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+.sidebar-left h2 {
+    margin-top: 0;
+}
+
+.main-content {
+    grid-area: main;
+    padding: 20px;
+}
+
+.article {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.article h3 {
+    margin-top: 0;
+}
+
+.sidebar-right {
+    grid-area: sidebar-right;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+.sidebar-right h2 {
+    margin-top: 0;
+}
+
+.sidebar-right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-right ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar-right ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.sidebar-right ul li a:hover {
+    color: #ff8c00; 
+}
+
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8em;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "footer";
+    }
+
+    .sidebar-left, .sidebar-right {
+        display: none;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

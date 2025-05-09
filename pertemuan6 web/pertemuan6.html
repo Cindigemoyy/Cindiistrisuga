@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi</title>
+    <link rel="stylesheet" href="pertemuan6.css">
+</head>
+<body>
+    <div class="container android-style">
+        <h2>Silahkan Isikan Data</h2>
+        <form>
+            <input type="text" placeholder="First name" required>
+            <input type="text" placeholder="Middle name">
+            <input type="text" placeholder="Last name">
+            <input type="date" placeholder="Tanggal Lahir" required>
+
+            <div class="gender">
+                <label>Jenis Kelamin:</label>
+                <input type="radio" name="gender" value="Pria" id="pria">
+                <label for="pria">Pria</label>
+                <input type="radio" name="gender" value="Wanita" id="wanita">
+                <label for="wanita">Wanita</label>
+            </div>
+
+            <input type="text" placeholder="Tempat Tinggal">
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone">
+            <input type="password" placeholder="Password" required>
+
+            <div class="actions">
+                <button type="submit">REGISTER</button>
+            </div>
+            <a href="#" class="back">Kembali / Back</a>
+        </form>
+    </div>
+</body>
+</html>

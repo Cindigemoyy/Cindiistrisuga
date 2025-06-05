@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Konversi Bilangan Desimal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      padding: 30px;
+      width: 350px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .card h2 {
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+
+    input {
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    button {
+      background-color: #00bcd4;
+      border: none;
+      color: white;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0097a7;
+    }
+
+    .output {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    .output p {
+      margin: 10px 0;
+      background: rgba(255,255,255,0.2);
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .error {
+      color: #ff6666;
+      font-weight: bold;
+    }
+
+    .icon {
+      font-size: 30px;
+      margin-bottom: 10px;
+      color: #ffd700;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon"><i class="fas fa-calculator"></i></div>
+    <h2>Konversi Desimal Gemoyy</h2>
+    <div class="input-group">
+      <label for="inputDesimal">Masukkan Angka:</label>
+      <input type="text" id="inputDesimal" placeholder="Contoh: 255">
+    </div>
+    <button onclick="konversi()"><i class="fas fa-sync-alt"></i> Konversi</button>
+    <div class="output" id="hasil"></div>
+  </div>
+
+  <script>
+    function konversi() {
+      const input = document.getElementById("inputDesimal").value;
+      const hasil = document.getElementById("hasil");
+      hasil.innerHTML = "";
+
+      if (!isValidDesimal(input)) {
+        hasil.innerHTML = "<p class='error'>⚠️ Masukkan angka desimal yang valid!</p>";
+        return;
+      }
+
+      const desimal = parseInt(input);
+      hasil.innerHTML = `
+        <p><strong>Biner:</strong> ${desimal.toString(2)}</p>
+        <p><strong>Oktal:</strong> ${desimal.toString(8)}</p>
+        <p><strong>Heksadesimal:</strong> ${desimal.toString(16).toUpperCase()}</p>
+      `;
+    }
+
+    function isValidDesimal(str) {
+      return /^-?\d+$/.test(str);
+    }
+  </script>
+</body>
+</html>

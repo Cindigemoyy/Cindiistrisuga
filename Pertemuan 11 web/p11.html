@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Finder</title>
+  <link rel="stylesheet" href="p11.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📚 Book Finder</h1>
+
+    <div class="search-bar">
+      <input type="text" id="keyword" placeholder="Search keyword..." />
+      <input type="number" id="year" placeholder="Enter year" style="display:none;" />
+    </div>
+
+    <div class="filters">
+      <label><input type="radio" name="searchType" value="title" /> Title</label>
+      <label><input type="radio" name="searchType" value="author" /> Author</label>
+      <label><input type="radio" name="searchType" value="publisher" /> Publisher</label>
+      <label><input type="radio" name="searchType" value="title_year" /> Title & Year</label>
+    </div>
+
+    <div class="result" id="resultArea"></div>
+  </div>
+
+  <script src="p11.js"></script>
+</body>
+</html>
